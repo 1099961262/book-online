@@ -70,4 +70,7 @@ export default {
   span{
     display: block 
   }
+  .router-link-exact-active i, .router-link-exact-active span{
+      color: green
+  }
 </style>
