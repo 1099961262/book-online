@@ -26,7 +26,7 @@ export default {
 
 
 <style lang="scss">
-  body, h1, h2, h3, h4, h5, h6, p, ul, li, input, button, img { margin: 0; padding: 0;}
+  * { margin: 0; padding: 0;box-sizing: border-box}
   html, body { width: 100%; height: 100%; }
 
   a   { text-decoration: none; }
@@ -43,15 +43,16 @@ export default {
   #app{
     position: relative;
     width: 100%;
-    height: 100%
+    height: 100%;
   }
   footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 55px;
-    border-top: 1px solid lightgray
+    border-top: 1px solid lightgray;
+    background: white
   }
   ul{
     display: flex
