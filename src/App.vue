@@ -73,4 +73,7 @@ export default {
   .router-link-exact-active i, .router-link-exact-active span{
       color: green
   }
+  #app > div{
+    height: 100%;
+  }
 </style>
