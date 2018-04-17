@@ -1,21 +1,20 @@
 <template>
- <div>
+ <div class="home-page">
    <header>
        <p>首页</p>
    </header>
 
    <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide banner">
+        <img src="/static/img/1.png">
+      </div>
+      <div class="swiper-slide banner">
+        <img src="/static/img/2.png">
+        </div>
+      <div class="swiper-slide banner">
+        <img src="/static/img/3.png">
+        </div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -29,7 +28,6 @@
 <script src="./home-page.js"></script>
     
 
-<style lang='scss' scoped>
+<style lang='scss'>
     @import './home-page.scss';
-
 </style>
