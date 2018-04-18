@@ -3,7 +3,7 @@
     <div>
       <router-view/>
     </div>
-    
+
     <footer>
       <ul>
           <router-link tag="li" :to="{name: 'HomePage'}"><i class="fa fa-home"></i><span>首页</span> </router-link>
@@ -12,9 +12,9 @@
           <router-link tag="li" :to="{name: 'Personal'}"><i class="fa fa-user"></i><span>个人</span></router-link>
       </ul>
     </footer>
-      
+
   </div>
- 
+
 </template>
 
 <script>
@@ -68,6 +68,6 @@ export default {
     color: gray
   }
   span{
-    display: block 
+    display: block
   }
 </style>
