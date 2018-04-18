@@ -27,7 +27,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'fontIcon': 'font-awesome/css/font-awesome.css' 
+      'fontIcon': 'font-awesome/css/font-awesome.css',
+      'swiper-css':'swiper/dist/css/swiper.css'
     }
   },
   module: {
