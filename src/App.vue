@@ -46,16 +46,19 @@ export default {
     height: 100%;
   }
   footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    
+    height: 55px;
+    border-top: 1px solid gray;
+    
+  }
+  footer > ul{
+    display: flex;
     width: 100%;
     height: 55px;
-    border-top: 1px solid lightgray;
-    background: white
-  }
-  ul{
-    display: flex
+    background: white;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
   }
   li{
     width: 25%;
@@ -69,5 +72,12 @@ export default {
   }
   span{
     display: block 
+  }
+  .router-link-exact-active i, .router-link-exact-active span{
+      color: green
+  }
+  #app > div{
+    height: calc(100% - 55px);
+    overflow-y: scroll;
   }
 </style>
