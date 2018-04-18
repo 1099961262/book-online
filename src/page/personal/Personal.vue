@@ -44,11 +44,12 @@
         <div></div>
         <div>
           <img src="../../assets/12.png">
-          <p>{{userName}}</p>
+          <p>{{ userName }}</p>
         </div>
+        <!--设置个人资料-->
         <div class="main-count">
-          <p @click="perdata">设置个人资料 <span></span></p>
-          <p @click="csreceipt">收货地址管理<span></span></p>
+          <p>设置个人资料 <span></span></p>
+          <p>收货地址管理<span></span></p>
         </div>
         <div class="main-count">
           <p>我的订单 <span></span></p>
