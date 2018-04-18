@@ -5,7 +5,7 @@
             <router-link  tag="li" to="{name:'HomeBuy'}"  class="books-li" v-for="book in bookInfo" :key="book.id">
                 <img :src="book.cover">
                 <p>{{book.name}}</p>
-                <p>$:{{book.price}}</p>           
+                <p>￥{{book.price}}</p>           
             </router-link>
         </ul>
    </div>

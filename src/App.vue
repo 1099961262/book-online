@@ -3,7 +3,6 @@
     <div>
       <router-view/>
     </div>
-    
     <footer>
       <ul>
           <router-link tag="li" :to="{name: 'HomePage'}"><i class="fa fa-home"></i><span>首页</span> </router-link>
