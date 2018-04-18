@@ -79,5 +79,24 @@ export default {
   #app > div{
     height: calc(100% - 55px);
     overflow-y: scroll;
+    .infoBox{
+      >p{
+          height: 50px;
+          width: 100%;  
+          >span{
+            width: 100%;
+            height: 50px;
+            display: inline-block;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+          }
+      }
+    }
   }
 </style>

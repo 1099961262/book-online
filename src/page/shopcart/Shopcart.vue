@@ -1,6 +1,6 @@
 <template>
- <div class="shopcart">
-     <p>购物车</p>
+ <div class="shopcart infoBox">
+     <p><span>购物车</span></p>
      <div class="shopDes">
          <button type="button" v-if="!isEdit" @click="edit">编辑</button>
          <button type="button" v-if="isEdit" @click="edit">取消</button>

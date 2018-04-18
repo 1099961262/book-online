@@ -1,6 +1,6 @@
 <template>
- <div class="classify">
-     <p>分类</p>
+ <div class="classify infoBox">
+     <p><span>分类</span></p>
      <div class="search-main">
          <div class="search-ipt">
             <i class="fa fa-search"></i>
