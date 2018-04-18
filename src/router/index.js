@@ -4,6 +4,7 @@ import HomePage from '@/page/home/HomePage'
 import Classify from '@/page/classify/Classify'
 import Shopcart from '@/page/shopcart/Shopcart'
 import Personal from '@/page/personal/Personal'
+import BookDetail from '@/page/bookdetail/BookDetail'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/personal',
       name: 'Personal',
       component: Personal
+    },
+    {
+      path: '/bookdetail',
+      name: 'BookDetail',
+      component: BookDetail
     }
   ]
 })
