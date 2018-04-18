@@ -17,9 +17,13 @@
 </template>
 
 <script>
+import BookDetail from '@/page/bookdetail/BookDetail'
 import 'fontIcon'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    BookDetail
+  }
 }
 </script>
 
