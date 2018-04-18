@@ -8,7 +8,6 @@ export default{
     },
     created(){
         axios.get("/static/api/hot-book.json").then((res) => {
-            console.log(res);
             this.buyBook = res.data
         })
     },
