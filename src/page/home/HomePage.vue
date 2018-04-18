@@ -1,9 +1,12 @@
 <template>
-  <div class="home-page">
-    <header>
-      <p>首页</p>
-    </header>
+  <div class="home-page infoBox">
+    
+      <p>
+        <span>首页</span>
+      </p>
+    
     <!-- 轮播图  -->
+    <div class="header-top">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide banner">
@@ -19,8 +22,6 @@
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
       <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
     <!-- 新闻 -->
     <div class="news">
@@ -32,6 +33,7 @@
       <HomeRecom title="编辑推荐" :book-info="editBook"/>
       <HomeRecom title="热门推荐" :book-info="hotBook"/>
       <HomeRecom title="新书推荐" :book-info="newBook"/>
+    </div>
     </div>
   </div>
 </template>
