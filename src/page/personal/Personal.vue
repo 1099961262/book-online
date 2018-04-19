@@ -8,6 +8,7 @@
         <div></div>
         <div>
           <img src="../../assets/12.png">
+          <!--用户名-->
           <p>{{ userName }}</p>
         </div>
         <!--设置个人资料-->

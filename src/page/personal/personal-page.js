@@ -24,6 +24,7 @@ export default {
       sessionStorage.removeItem("loginState");
       this.$router.replace('Login');
     },
+    //获取用户名
     name(){
       this.userName = JSON.parse(sessionStorage.getItem("loginState"));
     }
