@@ -1,14 +1,20 @@
 import 'swiper-css'
 import Swiper from 'swiper'
 import HomeRecom from '@/page/home/HomeRecom'
+import BookDetail from '@/page/bookdetail/BookDetail'
 
 export default {
     name: 'HomePage',
+    name: 'BookDetail',
     data() {
       return {
         editBook:[],
         hotBook: [],
-        newBook: []
+        newBook: [],
+        detailPanel_show:false,
+        bookDetail:{
+
+        }
       }
     },
     components: {
@@ -50,6 +56,19 @@ export default {
               prevEl: '.swiper-button-prev',
             },
           });
+    },
+    methods:{
+      showDetailPanel(book){
+        this.detailPanel_show = true;
+      
+        this.bookDetail = {         
+          name:book.name,
+          author:book.author,
+          price:book.price,
+          cover:book.cover,
+          describe:book.describe
+        }
+      }
     }
     
 }

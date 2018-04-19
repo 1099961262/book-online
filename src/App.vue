@@ -51,8 +51,6 @@ export default {
   footer{
     
     height: 55px;
-    
-    
   }
   footer > ul{
     display: flex;
