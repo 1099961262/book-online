@@ -19,20 +19,8 @@ export default {
   },
   data () {
     return {
-      userName:""
+      userName:"",
+      loginState:false
     }
-  },
-  methods:{
-    //判断用户是否登录
-    getUserName(){
-      if(localStorage.getItem('userName')){
-        this.userName = localStorage.getItem('userName')
-      }else{
-        this.userName = "请登录"
-      }
-    }
-  },
-  mounted(){
-    this.getUserName();
   }
 }

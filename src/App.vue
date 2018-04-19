@@ -9,7 +9,7 @@
           <router-link tag="li" :to="{name: 'HomePage'}"><i class="fa fa-home"></i><span>首页</span> </router-link>
           <router-link tag="li" :to="{name: 'Classify'}"><i class="fa fa-table"></i><span>分类</span></router-link>
           <router-link tag="li" :to="{name: 'Shopcart'}"><i class="fa fa-shopping-cart"></i><span>购物车</span></router-link>
-          <router-link tag="li" :to="{name: 'Personal'}"><i class="fa fa-user"></i><span>个人</span></router-link>
+          <router-link tag="li" :to="{name: tag}"><i class="fa fa-user"></i><span>个人</span></router-link>
       </ul>
     </footer>
 
@@ -20,7 +20,25 @@
 <script>
 import 'fontIcon'
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return{
+      tag:''
+    }
+  },
+  created(){
+    this.isLogin();
+  },
+  methods:{
+    //判断是否登录
+    isLogin() {
+      if(localStorage.getItem('userName')){
+        this.tag = 'Personal';
+      }else {
+        this.tag = 'Login';
+      }
+    }
+  }
 }
 </script>
 
@@ -46,10 +64,10 @@ export default {
     height: 100%;
   }
   footer{
-    
+
     height: 55px;
     border-top: 1px solid gray;
-    
+
   }
   footer > ul{
     display: flex;
@@ -82,7 +100,7 @@ export default {
     .infoBox{
       >p{
           height: 50px;
-          width: 100%;  
+          width: 100%;
           >span{
             width: 100%;
             height: 50px;
