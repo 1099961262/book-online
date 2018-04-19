@@ -15,7 +15,7 @@
                  </div>
                  <ul class="changeNum">
                      <li>-</li>
-                     <li>2</li>
+                     <li>{{buy.num}}</li>
                      <li>+</li>
                  </ul>
              </li>

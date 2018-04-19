@@ -3,15 +3,11 @@
     <div class="bookDetail infoBox">
         <div class="bookDetailHeader">
             <div>
-                <i class="fa fa-chevron-left"></i>
+                <router-link tag="i" class="fa fa-chevron-left" :to="{name: 'HomePage'}"></router-link>
                 <p><span>图书详情</span></p>
                 <i class="fa fa-ellipsis-v"></i>
             </div>
         </div>
-        <!-- <div class="bookDetailBody">
-            
-            <p class="bookName">{{}}</p>
-        </div> -->
        <div class="bookDetailBody">
            <div class="bodyTop">
                 <div class="bookBaseInfo">
@@ -26,7 +22,8 @@
                 </div>
                 <p class="bookName">{{totalInfo.name}}</p>
                 <div class="buttonBox">
-                    <button type="button" class="plusCart">加入购物车</button>
+                    <!-- <button type="button" class="plusCart">加入购物车</button> -->
+                    <router-link tag="button" type="button" class="plusCart" :to="{name: 'Shopcart', params: totalInfo}">加入购物车</router-link>
                     <button type="button" class="buyNow">立即购买</button>
                 </div>
            </div>
