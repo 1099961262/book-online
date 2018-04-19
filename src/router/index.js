@@ -5,6 +5,8 @@ import Classify from '@/page/classify/Classify'
 import Shopcart from '@/page/shopcart/Shopcart'
 import Personal from '@/page/personal/Personal'
 import BookDetail from '@/page/bookdetail/BookDetail'
+import Login from '@/page/login/Login'
+import Personaldata from '@/page/personaldata/Personaldata'
 
 Vue.use(Router)
 
@@ -35,6 +37,16 @@ export default new Router({
       path: '/bookdetail',
       name: 'BookDetail',
       component: BookDetail
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/personaldata',
+      name: 'Personaldata',
+      component: Personaldata
     }
   ]
 })
