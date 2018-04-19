@@ -61,7 +61,7 @@
           <p>浏览记录<span></span></p>
         </div>
         <div class="self-footer">
-          <button>退出登录</button>
+          <button @click="quit">退出登录</button>
         </div>
       </div>
     </main>
