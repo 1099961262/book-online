@@ -14,5 +14,18 @@ export default {
       userName:"",
       loginState:false
     }
+  },
+  created(){
+    this.name();
+  },
+  methods:{
+    quit(){
+      //移除登录状态
+      sessionStorage.removeItem("loginState");
+      this.$router.replace('Login');
+    },
+    name(){
+      this.userName = JSON.parse(sessionStorage.getItem("loginState"));
+    }
   }
 }

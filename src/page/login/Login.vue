@@ -2,7 +2,7 @@
   <div class="login">
     <header>
       <h3>登录/注册</h3>
-      <router-link tag="div" :to="{name: 'Personal' }" class="go-home"></router-link>
+      <router-link tag="div" :to="{name: 'HomePage' }" class="go-home"></router-link>
     </header>
     <main>
       <div>
@@ -13,36 +13,32 @@
         <div class="login-info" v-show="displayLogin">
           <div>
             <label></label>
-            <input type="text" placeholder="请输入您的手机号">
+            <input type="text" placeholder="请输入您的账号" class="number-1">
           </div>
           <div>
             <label></label>
-            <input type="text" placeholder="请输入您的密码">
+            <input type="text" placeholder="请输入您的密码" class="password-1">
           </div>
-          <router-link tag="section" :to="{name: 'HomePage'}">
-            <button type="button">登录</button>
-          </router-link>
+          <button type="button" @click="login">登录</button>
         </div>
         <div class="register-info" v-show="!displayLogin">
           <div>
             <label></label>
-            <input type="text" placeholder="请输入您的手机号">
+            <input type="text" placeholder="请输入您的账号" class="number-2">
           </div>
           <div>
             <label></label>
-            <input type="text" placeholder="请输入您的昵称">
+            <input type="text" placeholder="请输入您的昵称" class="name-2">
           </div>
           <div>
             <label></label>
-            <input type="text" placeholder="请输入您的密码">
+            <input type="text" placeholder="请输入您的密码" class="password-2">
           </div>
           <div>
             <label></label>
-            <input type="text" placeholder="请确认您的密码">
+            <input type="text" placeholder="请确认您的密码" class="password-3">
           </div>
-          <router-link tag="section" :to="{name: 'Personal'}">
-            <button type="button">注册</button>
-          </router-link>
+          <button type="button" @click="register">注册</button>
         </div>
       </div>
     </main>
