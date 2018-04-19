@@ -51,8 +51,6 @@ export default {
   footer{
     
     height: 55px;
-    
-
   }
   footer > ul{
     display: flex;
@@ -62,6 +60,7 @@ export default {
     justify-content: space-between;
     position: fixed;
     bottom: 0;
+    border-top: 1px solid lightgray
   }
   li{
     width: 25%;
