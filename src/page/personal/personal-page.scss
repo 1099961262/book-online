@@ -3,17 +3,8 @@
 *功能：个人中心样式设置
 */
 /******公共样式*******/
-*{
-  margin: 0;
-  padding:0;
-  box-sizing: border-box;
-  font:14px "微软雅黑";
-}
-a{
-  color:#000;
-}
 #app{
-   div{
+   & > div{
     width:100%;
     height:100%;
   }
