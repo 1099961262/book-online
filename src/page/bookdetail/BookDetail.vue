@@ -1,5 +1,5 @@
 <template>
-    
+
     <div class="bookDetail infoBox">
         <div class="bookDetailHeader">
             <div>
@@ -47,7 +47,7 @@
 
 </template>
 <style lang="scss" scoped>
-    @import "./book-detail.scss"
+    @import "./book-detail.scss";
 </style>
 
 <script src = "./book-detail.js"></script>
