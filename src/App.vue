@@ -29,7 +29,7 @@ export default {
   methods:{
     //判断是否登录
     isLogin() {
-      if(JSON.parse(sessionStorage.getItem("loginState"))){
+      if(sessionStorage.getItem("loginState")){
         this.tag = 'Personal';
         return this.tag;
       }else {
