@@ -3,26 +3,38 @@
     <div>
       <router-view/>
     </div>
+
     <footer>
       <ul>
           <router-link tag="li" :to="{name: 'HomePage'}"><i class="fa fa-home"></i><span>首页</span> </router-link>
           <router-link tag="li" :to="{name: 'Classify'}"><i class="fa fa-table"></i><span>分类</span></router-link>
           <router-link tag="li" :to="{name: 'Shopcart'}"><i class="fa fa-shopping-cart"></i><span>购物车</span></router-link>
-          <router-link tag="li" :to="{name: 'Personal'}"><i class="fa fa-user"></i><span>个人</span></router-link>
+          <router-link tag="li" :to="{name: isLogin}"><i class="fa fa-user"></i><span>个人</span></router-link>
       </ul>
     </footer>
-      
+
   </div>
- 
+
 </template>
 
 <script>
-import BookDetail from '@/page/bookdetail/BookDetail'
 import 'fontIcon'
 export default {
   name: 'App',
-  components: {
-    BookDetail
+  data(){
+    return{
+      tag:''
+    }
+  },
+  computed:{
+    //判断是否登录
+    isLogin () {
+      if (sessionStorage.getItem("loginState")) {
+        return 'Personal';
+      } else {
+        return 'Login';
+      }
+    }
   }
 }
 </script>
@@ -49,7 +61,6 @@ export default {
     height: 100%;
   }
   footer{
-    
     height: 55px;
   }
   footer > ul{
@@ -73,7 +84,7 @@ export default {
     color: gray
   }
   span{
-    display: block 
+    display: block
   }
   .router-link-exact-active i, .router-link-exact-active span{
       color: green
@@ -83,22 +94,21 @@ export default {
     overflow-y: scroll;
     .infoBox{
       >p{
+        height: 50px;
+        width: 100%;
+        >span{
+          width: 100%;
           height: 50px;
-          width: 100%; 
-           
-          >span{
-            width: 100%;
-            height: 50px;
-            background: black; 
-            display: inline-block;
-            color: white;
-            text-align: center;
-            line-height: 50px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10;
-          }
+          background: black;
+          display: inline-block;
+          color: white;
+          text-align: center;
+          line-height: 50px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 10;
+        }
       }
     }
   }

@@ -5,7 +5,6 @@ export default {
         // console.log(this.totalInfo)
         return {
             totalInfo: totalBook
-        }
-    },
-
+        };
+    }
 }
