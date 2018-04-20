@@ -7,7 +7,7 @@
             <input type="text" placeholder="请输入你想查找的图书名称进行搜索" v-model="searchInfo" @keydown.enter="search">
          </div>
          <ul class="book-list">
-             <li v-for="singleBook in filterBook" :key="singleBook.id">
+             <router-link tag="li" v-for="singleBook in filterBook" :key="singleBook.id" :to="{name: 'BookDetail', params:singleBook}">
                  <img :src="singleBook.cover" alt="" >
                  <div class="bookDes">
                      <p class="bookName">{{singleBook.name}}</p>
@@ -15,7 +15,7 @@
                      <p class="price">￥{{singleBook.price}}</p>
                  </div>
                  <i class="fa fa-chevron-right "></i>
-             </li>
+             </router-link>
          </ul>
      </div>
  </div>

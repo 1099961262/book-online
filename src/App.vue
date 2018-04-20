@@ -9,7 +9,7 @@
           <router-link tag="li" :to="{name: 'HomePage'}"><i class="fa fa-home"></i><span>首页</span> </router-link>
           <router-link tag="li" :to="{name: 'Classify'}"><i class="fa fa-table"></i><span>分类</span></router-link>
           <router-link tag="li" :to="{name: 'Shopcart'}"><i class="fa fa-shopping-cart"></i><span>购物车</span></router-link>
-          <router-link tag="li" :to="{name: isLogin()}"><i class="fa fa-user"></i><span>个人</span></router-link>
+          <router-link tag="li" :to="{name: isLogin}"><i class="fa fa-user"></i><span>个人</span></router-link>
       </ul>
     </footer>
 
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import BookDetail from '@/page/bookdetail/BookDetail'
 import 'fontIcon'
 export default {
   name: 'App',
@@ -26,17 +27,22 @@ export default {
       tag:''
     }
   },
-  methods:{
+  computed:{
     //判断是否登录
-    isLogin() {
-      if(JSON.parse(sessionStorage.getItem("loginState"))){
-        this.tag = 'Personal';
-        return this.tag;
-      }else {
-        this.tag = 'Login';
-        return this.tag;
+    isLogin:function () {
+      if (sessionStorage.getItem("loginState")) {
+        //this.tag = 'Personal';
+        //return this.tag;
+        return 'Personal';
+      } else {
+//        this.tag = 'Login';
+//        return this.tag;
+        return 'Login';
       }
     }
+  },
+  components: {
+    BookDetail
   }
 }
 </script>
@@ -63,10 +69,7 @@ export default {
     height: 100%;
   }
   footer{
-
     height: 55px;
-    border-top: 1px solid gray;
-
   }
   footer > ul{
     display: flex;
@@ -76,6 +79,7 @@ export default {
     justify-content: space-between;
     position: fixed;
     bottom: 0;
+    border-top: 1px solid lightgray
   }
   li{
     width: 25%;
@@ -98,21 +102,21 @@ export default {
     overflow-y: scroll;
     .infoBox{
       >p{
-          height: 50px;
+        height: 50px;
+        width: 100%;
+        >span{
           width: 100%;
-          >span{
-            width: 100%;
-            height: 50px;
-            display: inline-block;
-            background: black;
-            color: white;
-            text-align: center;
-            line-height: 50px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10;
-          }
+          height: 50px;
+          background: black;
+          display: inline-block;
+          color: white;
+          text-align: center;
+          line-height: 50px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 10;
+        }
       }
     }
   }
