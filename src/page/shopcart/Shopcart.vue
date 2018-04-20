@@ -21,8 +21,8 @@
                  </ul>
              </li>
          </ul>
-         <!-- <button type="button" class="goPay" >前往支付</button> -->
-         <router-link tag="button" type='button' class="goPay" :to="{name: 'Pay', params: {total: this.cartTotal}}">前往支付</router-link>
+         <button type="button" class="goPay" @click="changepage">前往支付</button>
+         <!-- <router-link tag="button" type='button' class="goPay" :to="{name: 'Pay', params: {total: this.cartTotal}}">前往支付</router-link> -->
      </div>
  </div>
 </template>

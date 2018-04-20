@@ -17,7 +17,7 @@
                   <p class="clearFix"><span class="smallTitle">邮编</span>  <span>121213</span></p>
                   <p class="clearFix"><span class="smallTitle">电话</span>  <span>121213</span></p>
               </li>
-              <li>修改地址<i class="fa fa-chevron-right fr"></i></li>
+              <router-link tag="li" :to="{name: 'Personaldata'}">修改地址<i class="fa fa-chevron-right fr"></i></router-link>
               <li>新增地址<i class="fa fa-chevron-right fr"></i></li>
           </ul>
           <p class="payTitle">选择支付方式</p>
