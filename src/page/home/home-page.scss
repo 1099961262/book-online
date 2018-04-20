@@ -56,24 +56,26 @@ margin-bottom: 10px;
     display: inline-block;
 }
 }
-
 .detailpanelshow{
-    
     position: absolute;
-    bottom: 62px;
+    bottom: 26px;
     top: 55px;
     left: 12px;
     right: 12px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0 , 0.35);
     z-index: 11;
+    overflow-y: scroll;
+
     & > .detailpanelshowX{
+        
         height: 30px;
         border-bottom: 1px solid #ddd;
         margin-bottom: 5px;
         text-align: right;
         padding-right: 15px;
-        line-height: 30px;
+        line-height: 30px;     
+      
     }   
     .detailpanelshow-top{
         margin-bottom: 12px;
@@ -102,7 +104,11 @@ margin-bottom: 10px;
             width: 102px;
             display: inline-block;
         }
-        }         
+        }    
+      & > div .detailpanelshow-top-right-detail{
+            text-align: right;
+            padding: 10px 10px 0 0;
+        }     
     }
 
     .detailpanelshow-main{      
@@ -114,14 +120,54 @@ margin-bottom: 10px;
             margin-bottom: 10px;
         }
         >div{
-        height: 100px;
+        height: 160px;
         overflow: auto;
         padding: 0 12px;
         }
      
     }
 }
+//结算的样式
+.settlement{
+    display: flex;
+    margin-top: 10px;
+    > div{
+        width: 50%;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #ddd;
+        border-right: 0;
+    }
+    >div:nth-child(1){
+        border-left: 0;
+    }
+    div:nth-child(2){
+       >select{
+           border: 0;
+           font-size: 14px;
+           padding: 0 10px;
+       }
+    }
 
+}
+.settlement-pay{   
+    display: flex;
+    margin-left: calc(100% - 90%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    >div{
+        width: 45%;
+        border: 1px solid #ddd;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+    }
+    div:nth-child(2){
+        background:rgb(51, 153, 51);
+        color:white;
+    }
+}
 
 }
 
