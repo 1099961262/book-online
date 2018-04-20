@@ -1,13 +1,9 @@
 export default {
   name: 'Personaldata',
-  components:{
-    // Login,
-    // personaldata,
-    // addressmanage,
-  },
-  data () {
-    return {
-      users:''
+  methods:{
+    yes(){
+      alert("修改完成！");
+      this.$router.replace('Personal');
     }
   }
 }
