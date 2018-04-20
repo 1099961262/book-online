@@ -2,11 +2,11 @@
     <div class="books">
         <h5>{{ title }}</h5>
         <ul>
-            <router-link  tag="li" :to="{name:'BookDetail',params:''}"  class="books-li" v-for="book in bookInfo" :key="book.id">
+            <li @click="showDetailPanel(book)" class="books-li" v-for="book in bookInfo" :key="book.id">
                 <img :src="book.cover">
                 <p>{{book.name}}</p>
-                <p>$:{{book.price}}</p>           
-            </router-link>
+                <p>￥{{book.price}}</p>           
+            </li>
         </ul>
    </div>
 </template>
@@ -60,7 +60,12 @@
 
                }
            },
-           props:['title','bookInfo']
+           props:['title','bookInfo'],
+           methods:{
+               showDetailPanel(book){
+                   this.$emit('showDetailPanel',book);
+               }
+           }
         }
 </script>
 
