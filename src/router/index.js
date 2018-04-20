@@ -5,6 +5,7 @@ import Classify from '@/page/classify/Classify'
 import Shopcart from '@/page/shopcart/Shopcart'
 import Personal from '@/page/personal/Personal'
 import BookDetail from '@/page/bookdetail/BookDetail'
+import Pay from '@/page/shopcart/Pay'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/bookdetail',
       name: 'BookDetail',
       component: BookDetail
+    },
+    {
+      path: '/pay',
+      name: 'Pay',
+      component: Pay
     }
   ]
 })

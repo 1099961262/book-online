@@ -14,8 +14,18 @@ export default{
                 totalPrice: readyBuy.price, 
                 checked: false
             },
-            delIndex: []
+            cartTotal: 0
         }
+    },
+    watch: {
+        buyBook: function(){
+            this.cartTotal = 0;
+            for(let i=0,len=this.buyBook.length;i<len;i++){
+                // console.log(this.buyBook[i].totalPrice)
+                this.cartTotal += parseInt(this.buyBook[i].totalPrice)
+            }
+        }
+      
     },
     created(){
         if(this.readyBook.name !== undefined){
@@ -29,7 +39,8 @@ export default{
             books.push(this.readyBook);            
             localStorage["bookList"] = JSON.stringify(books);
         }
-        this.buyBook = JSON.parse(localStorage["bookList"])
+        this.buyBook = JSON.parse(localStorage["bookList"]);
+        // console.log(this.cartTotal)
     },
     methods: {
         edit(){

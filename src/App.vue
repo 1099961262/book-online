@@ -84,12 +84,13 @@ export default {
     .infoBox{
       >p{
           height: 50px;
-          width: 100%;  
+          width: 100%; 
+           
           >span{
             width: 100%;
             height: 50px;
+            background: black; 
             display: inline-block;
-            background: black;
             color: white;
             text-align: center;
             line-height: 50px;
