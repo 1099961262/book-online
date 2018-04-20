@@ -24,7 +24,8 @@
                 <div class="buttonBox">
                     <!-- <button type="button" class="plusCart">加入购物车</button> -->
                     <router-link tag="button" type="button" class="plusCart" :to="{name: 'Shopcart', params: totalInfo}">加入购物车</router-link>
-                    <button type="button" class="buyNow">立即购买</button>
+                    <!-- <button type="button" class="buyNow">立即购买</button> -->
+                    <router-link tag="button" type="button" class="buyNow" :to="{name: 'Pay', params: {total: totalInfo.price}}">立即购买</router-link>
                 </div>
            </div>
             <form class="bodyBottom">

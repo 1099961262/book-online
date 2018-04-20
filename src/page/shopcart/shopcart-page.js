@@ -28,8 +28,9 @@ export default{
       
     },
     created(){
+        let books;
         if(this.readyBook.name !== undefined){
-            let books;
+            // let books;
             if(localStorage["bookList"]){
                 books = JSON.parse(localStorage["bookList"])
             }else{
@@ -38,9 +39,16 @@ export default{
             }
             books.push(this.readyBook);            
             localStorage["bookList"] = JSON.stringify(books);
+           
+        }else{
+            if(localStorage["bookList"]){
+                books = JSON.parse(localStorage["bookList"])
+            }else{
+                books = [],
+                localStorage.setItem("bookList", JSON.stringify(books));
+            }
         }
         this.buyBook = JSON.parse(localStorage["bookList"]);
-        // console.log(this.cartTotal)
     },
     methods: {
         edit(){
