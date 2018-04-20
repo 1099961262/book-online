@@ -98,7 +98,7 @@ export default{
                 localStorage["bookList"] = JSON.stringify(this.buyBook);
             },
         changepage(){
-            if(localStorage['book-users']){
+            if(sessionStorage['loginState']){
                 this.$router.push({name: 'Pay', params: {total: this.cartTotal}})
             }else{
                 this.$router.push('Login')
