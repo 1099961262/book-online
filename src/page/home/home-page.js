@@ -1,11 +1,11 @@
 import 'swiper-css'
 import Swiper from 'swiper'
 import HomeRecom from '@/page/home/HomeRecom'
-import BookDetail from '@/page/bookdetail/BookDetail'
+
 
 export default {
     name: 'HomePage',
-    name: 'BookDetail',
+    
     data() {
       return {
         editBook:[],
@@ -66,7 +66,13 @@ export default {
           author:book.author,
           price:book.price,
           cover:book.cover,
-          describe:book.describe
+          info1:book.describe,
+          info2:book.describe,
+          authorInfo:'作者是你妈个胎神',
+          page:'108000',
+          bookNum:'MTS9527',
+          date:'1988年'  
+          
         }
       }
     }
