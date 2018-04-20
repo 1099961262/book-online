@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import BookDetail from '@/page/bookdetail/BookDetail'
 import 'fontIcon'
 export default {
   name: 'App',
@@ -29,20 +28,13 @@ export default {
   },
   computed:{
     //判断是否登录
-    isLogin:function () {
+    isLogin () {
       if (sessionStorage.getItem("loginState")) {
-        //this.tag = 'Personal';
-        //return this.tag;
         return 'Personal';
       } else {
-//        this.tag = 'Login';
-//        return this.tag;
         return 'Login';
       }
     }
-  },
-  components: {
-    BookDetail
   }
 }
 </script>
