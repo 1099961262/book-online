@@ -1,0 +1,110 @@
+.personaldata{
+  width:100%;
+  height: calc(100% - 55px);
+  background-color: white;
+  position: relative;
+  header{
+    width:100%;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    h3 {
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      font-size: 16px;
+    }
+    .go-home{
+      background: url("../../assets/return.svg") no-repeat;
+      background-size: 100% 100%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  main{
+    margin-top: 50px;
+    width:100%;
+    height:100%;
+    padding: 10px 10px 0;
+    & > div{
+      width:100%;
+      height:auto;
+      .login-title{
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #bfbfbf;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        div{
+          width:45%;
+          height:100%;
+          text-align: center;
+          font-size: 18px;
+          border-bottom: 2px solid transparent;
+        }
+      }
+      div{
+        width:100%;
+        height:auto;
+        & > div{
+          width:100%;
+          height: 80px;
+          border-bottom: 1px solid #bfbfbf;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          label{
+            font-size: 14px;
+            color: #515151;
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            //text-align: center;
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+          }
+          input{
+            width:80%;
+            border: 0;
+            height: 40px;
+            padding: 5px 10px;
+            font-size: 16px;
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+          }
+          select{
+            width: 30%;
+            height: 40px;
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+          }
+        }
+        button{
+          width:100%;
+          height: 50px;
+          margin: 50px 0;
+          border-radius: 5px;
+          background-color: #40a53e;
+          border: 0;
+          font-size: 18px;
+          letter-spacing: 8px;
+          color: white;
+        }
+
+      }
+    }
+  }
+}
