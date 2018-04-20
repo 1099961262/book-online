@@ -9,7 +9,7 @@
           <router-link tag="li" :to="{name: 'HomePage'}"><i class="fa fa-home"></i><span>首页</span> </router-link>
           <router-link tag="li" :to="{name: 'Classify'}"><i class="fa fa-table"></i><span>分类</span></router-link>
           <router-link tag="li" :to="{name: 'Shopcart'}"><i class="fa fa-shopping-cart"></i><span>购物车</span></router-link>
-          <router-link tag="li" :to="{name: isLogin}"><i class="fa fa-user"></i><span>个人</span></router-link>
+          <router-link tag="li" :to="{name: isLogin()}"><i class="fa fa-user"></i><span>个人</span></router-link>
       </ul>
     </footer>
 
@@ -26,7 +26,8 @@ export default {
       tag:''
     }
   },
-  computed:{
+
+  methods:{
     //判断是否登录
     isLogin () {
       if (sessionStorage.getItem("loginState")) {

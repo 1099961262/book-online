@@ -13,7 +13,7 @@
         </div>
         <!--设置个人资料-->
         <div class="main-count">
-          <p>设置个人资料 <span></span></p>
+          <router-link tag="p" :to="{name: 'Personaldata' }" >设置个人资料 <span></span></router-link>
           <p>收货地址管理<span></span></p>
         </div>
         <div class="main-count">
