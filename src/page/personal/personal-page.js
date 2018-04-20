@@ -12,7 +12,8 @@ export default {
   data () {
     return {
       userName:"",
-      loginState:false
+      loginState:false,
+      users:''
     }
   },
   created(){
@@ -26,7 +27,24 @@ export default {
     },
     //获取用户名
     name(){
-      this.userName = JSON.parse(sessionStorage.getItem("loginState"));
+      if(localStorage.getItem("book-users")) {
+        this.users = JSON.parse(localStorage.getItem("book-users"));
+      }else {
+        this.users = [];
+      }
+      var flag = null;
+      var usernumber = JSON.parse(sessionStorage.getItem("loginState"))
+      for(let i = 0, len = this.users.length; i < len; i++) {
+        if(this.users[i]["usernumber"] == usernumber ) {
+          flag = this.users[i];
+          break;
+        }
+      }
+      if(flag.username){
+        this.userName = flag.username;
+      }else {
+        this.userName = flag.usernumber;
+      }
     }
   }
 }
