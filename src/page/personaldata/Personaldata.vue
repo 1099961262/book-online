@@ -64,6 +64,6 @@
 
 <script src="./personaldata-page.js"></script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
   @import './personaldata-page.scss';
 </style>

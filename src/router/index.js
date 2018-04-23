@@ -7,6 +7,7 @@ import Personal from '@/page/personal/Personal'
 import BookDetail from '@/page/bookdetail/BookDetail'
 import Login from '@/page/login/Login'
 import Personaldata from '@/page/personaldata/Personaldata'
+import Personaladdress from '@/page/personaladdress/Personaladdress'
 import Pay from '@/page/shopcart/Pay'
 
 
@@ -54,6 +55,11 @@ export default new Router({
       path: '/pay',
       name: 'Pay',
       component: Pay
+    },
+    {
+      path: '/personaladdress',
+      name: 'Personaladdress',
+      component: Personaladdress
     }
   ]
 })
